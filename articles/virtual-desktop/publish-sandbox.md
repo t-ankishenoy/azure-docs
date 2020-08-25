@@ -85,7 +85,9 @@ To publish Windows Sandbox to your host pool, go to the [Manage app groups](mana
 2. Under "Application path" enter "C:\windows\system32\WindowsSandbox.exe"
 3. Enter "Windows Sandbox" in "Application Name"
 
-That's it! Leave the rest of the options defaults. You should now have 
+That's it! Leave the rest of the options defaults. You should now have Windows Sandbox published for your users.
+
+[TBD: Insert a screenshot here]
 
 ## Next steps
 
