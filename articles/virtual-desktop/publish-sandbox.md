@@ -48,7 +48,7 @@ To get the OS image from the Windows Insider Portal:
      >[!NOTE]
      >You must be member of the Windows Insider program to access the Windows Insider portal. To learn more about the Windows Insider program, check out our [Windows Insider documentation](/windows-insider/at-home/).
 
-2. Scroll down to the **Select edition** section and select **Windows 10 Insider Preview Enterprise (FAST) – Build 19041** or later.
+2. Scroll down to the **Select edition** section and select **Windows 10 Insider Preview Enterprise (FAST) – Build TBD** or later.
 
 3. Select **Confirm**, then select the language you wish to use, and then select **Confirm** again.
 
@@ -61,7 +61,7 @@ To get the OS image from the Windows Insider Portal:
 
 Next, you'll need to create a master VHD image. If you haven't created your master VHD image yet, go to [Prepare and customize a master VHD image](set-up-customize-master-image.md) and follow the instructions there.
 
-After you've created your master VHD image, you must install Windows Sandbox feature. To install it enter the following commands:
+After you've created your master VHD image, you must install the Windows Sandbox feature. To install it enter the following commands:
 
 ```cmd
 rem Install Windows Sandbox Feature
