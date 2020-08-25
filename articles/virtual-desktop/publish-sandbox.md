@@ -7,7 +7,7 @@ ms.date: 08/24/2020
 ms.author: guscatal
 manager: costinh
 ---
-# Set up MSIX app attach
+# Setup Windows Sandbox in Windows Virtual Desktop
 
 > [!IMPORTANT]
 > Windows Sandbox for WVD is currently in public preview 
@@ -18,7 +18,7 @@ This topic will walk you through how to publish Windows Sandbox for your users i
 
 ## Requirements
 
-Before you get started, here's what you need to configure MSIX app attach:
+Before you get started, here's what you need to configureWindows Sandbox in Windows Virtual Desktop:
 
 - Access to the Windows Insider portal to obtain the version of Windows 10 multi-user with support for the Windows Sandbox in WVD.
 - A functioning Windows Virtual Desktop deployment. To learn how to deploy Windows Virtual Desktop (classic), see [Create a tenant in Windows Virtual Desktop](./virtual-desktop-fall-2019/tenant-setup-azure-active-directory.md). To learn how to deploy Windows Virtual Desktop with Azure Resource Manager integration, see [Create a host pool with the Azure portal](./create-host-pools-azure-marketplace.md).
@@ -35,12 +35,9 @@ To get the OS image from the Azure portal:
 
 2. Go to **Create a virtual machine**.
 
-3. In the **Basic** tab, select **Windows 10 enterprise multi-session, version 2004**.
+3. In the **Basic** tab, select **Windows 10 enterprise multi-session, version 2009**.
 
 4. Follow the rest of the instructions to finish creating the virtual machine.
-
-     >[!NOTE]
-     >You can use this VM to directly test MSIX app attach. To learn more, skip ahead to [Generate a VHD or VHDX package for MSIX](#generate-a-vhd-or-vhdx-package-for-msix). Otherwise, keep reading this section.
 
 ### Get the OS image from the Windows Insider portal
 
