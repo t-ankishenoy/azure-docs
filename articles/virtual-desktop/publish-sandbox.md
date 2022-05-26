@@ -33,35 +33,17 @@ To get the OS image from the Azure portal:
 
 1. Open the [Azure portal](https://portal.azure.com) and sign in.
 
-2. Go to **Create a virtual machine**.
+2. Go to **Create a resource > Virtual Machine**.
 
-3. In the **Basic** tab, select **Windows 10 enterprise multi-session, version 2009**.
+3. In the **Basic** tab, for **Image** select **Windows 11 Enterprise multi-session- x64 Gen2**.
 
 4. Follow the rest of the instructions to finish creating the virtual machine.
-
-### Get the OS image from the Windows Insider portal
-
-To get the OS image from the Windows Insider Portal:
-
-1. Open the [Windows Insider portal](https://www.microsoft.com/software-download/windowsinsiderpreviewadvanced?wa=wsignin1.0) and sign in.
-
-     >[!NOTE]
-     >You must be member of the Windows Insider program to access the Windows Insider portal. To learn more about the Windows Insider program, check out our [Windows Insider documentation](/windows-insider/at-home/).
-
-2. Scroll down to the **Select edition** section and select **Windows 10 Insider Preview Enterprise (FAST) – Build TBD** or later.
-
-3. Select **Confirm**, then select the language you wish to use, and then select **Confirm** again.
-
-     >[!NOTE]
-     >At the moment, English is the only language that has been tested with the feature. You can select other languages, but they may not display as intended.
-
-4. When the download link is generated, select the **64-bit Download** and save it to your local hard disk.
 
 ## Prepare the VHD image for Azure
 
 Next, you'll need to create a master VHD image. If you haven't created your master VHD image yet, go to [Prepare and customize a master VHD image](set-up-customize-master-image.md) and follow the instructions there.
 
-After you've created your master VHD image, you must install the Windows Sandbox feature. To install it enter the following commands:
+After you've created your master VHD image, you must install the Windows Sandbox feature. To install it log in to your Virtual Machine through the **Remote Desktop Connection** App and open the Command Prompt to enter the following commands:
 
 ```cmd
 rem Install Windows Sandbox Feature
@@ -78,16 +60,31 @@ Next, prepare the VM VHD for Azure and upload the resulting VHD disk to Azure. T
 Once you've uploaded the VHD to Azure, create a host pool that's based on this new image by following the instructions in the [Create a host pool by using the Azure Marketplace](create-host-pools-azure-marketplace.md) tutorial.
 
 ## Publish Windows Sandbox on your host pool
-
-To publish Windows Sandbox to your host pool, go to the [Manage app groups](manage-app-groups.md) section:
+### Option 1: Using the Azure Portal
+To publish Windows Sandbox to your host pool, log in to the portal and go to the [Manage app groups](manage-app-groups.md) section:
 
 1. Under "Application source" select "File Path"
 2. Under "Application path" enter "C:\windows\system32\WindowsSandbox.exe"
 3. Enter "Windows Sandbox" in "Application Name"
 
-That's it! Leave the rest of the options defaults. You should now have Windows Sandbox published for your users.
+### Option 2: Using Powershell
+1.  Open Windows Powershell on your local machine:
+2.  Log in to your Azure account using the following powershell command:
+```cmd
+az login
 
-[TBD: Insert a screenshot here]
+Set-AzContext -Tenant [Workspace Tenant Id] -Subscription [Workspace Subscription Id]
+```
+3.  Creat a Sandbox Remote App using the following powershell command:
+```cmd
+New-AzWvdApplication -ResourceGroupName [Resource Group Name] -GroupName [Application Group Name] -FilePath 'C:\windows\system32\WindowsSandbox.exe' -IconIndex 0 -IconPath 'C:\windows\system32\WindowsSandbox.exe' -CommandLineSetting 'Allow' -ShowInPortal:$true -SubscriptionId [Workspace Subscription Id]
+```
+>[!NOTE]
+>This will prompt you for an app Name
+
+That's it! Leave the rest of the options defaults. You should now have Windows Sandbox published for your users. For reference your Remote Desktop app should now look like this:
+
+![image](https://user-images.githubusercontent.com/106349886/170580444-71f221d8-348c-4124-8e88-94c0275b0f4c.png)
 
 ## Next steps
 
