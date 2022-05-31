@@ -66,7 +66,7 @@ To publish Windows Sandbox to your host pool:
 1. Sign in to the Azure portal.
 2. Under "Application source," select **File Path**.
 3. For "Application path," enter **C:\windows\system32\WindowsSandbox.exe**.
-3. Enter "Windows Sandbox" in "Application Name"
+4. Enter **Windows Sandbox** into the "Application Name" field.
 
 ### Option 2: Using Powershell
 1.  Open Windows Powershell on your local machine:
