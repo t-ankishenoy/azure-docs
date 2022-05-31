@@ -60,7 +60,7 @@ Next, prepare the VM VHD for Azure and upload the resulting VHD disk to Azure. T
 Once you've uploaded the VHD to Azure, create a host pool that's based on this new image by following the instructions in the [Create a host pool by using the Azure Marketplace](create-host-pools-azure-marketplace.md) tutorial.
 
 ## Publish Windows Sandbox on your host pool
-### Option 1: Using the Azure Portal
+# [Azure portal](#tab/azure)
 To publish Windows Sandbox to your host pool, log in to the portal and go to the [Manage app groups](manage-app-groups.md) section:
 
 1. Under "Application source" select "File Path"
