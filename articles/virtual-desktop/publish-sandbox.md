@@ -73,7 +73,7 @@ To publish Windows Sandbox to your host pool using PowerShell:
 
 1.  Open Windows PowerShell on your local machine.
 2.  Run the following command to sign in to your Azure account:
-```cmd
+  ```powershell
   az login
 
 Set-AzContext -Tenant [Workspace Tenant Id] -Subscription [Workspace Subscription Id]
