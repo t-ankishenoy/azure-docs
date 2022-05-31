@@ -63,7 +63,8 @@ Once you've uploaded the VHD to Azure, create a host pool that's based on this n
 # [Azure portal](#tab/azure)
 To publish Windows Sandbox to your host pool:
 
-1. Under "Application source" select "File Path"
+1. Sign in to the Azure portal.
+2. Under "Application source," select **File Path**.
 3. For "Application path," enter **C:\windows\system32\WindowsSandbox.exe**.
 3. Enter "Windows Sandbox" in "Application Name"
 
