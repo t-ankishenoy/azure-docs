@@ -43,7 +43,7 @@ To get the OS image from the Azure portal:
 
 Next, you'll need to create a master VHD image. If you haven't created your master VHD image yet, go to [Prepare and customize a master VHD image](set-up-customize-master-image.md) and follow the instructions there.
 
-After you've created your master VHD image, you must install the Windows Sandbox feature. To install it log in to your Virtual Machine through the **Remote Desktop Connection** App and open the Command Prompt to enter the following commands:
+After you've created your master VHD image, you must install the Windows Sandbox feature. To install the VHD image, open the **Remote Desktop Connection** app and sign in to your virtual machine (VM), then open the command prompt and enter the following commands:
 
 ```cmd
 rem Install Windows Sandbox Feature
