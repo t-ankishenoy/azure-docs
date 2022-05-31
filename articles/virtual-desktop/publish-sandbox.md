@@ -69,7 +69,9 @@ To publish Windows Sandbox to your host pool:
 4. Enter **Windows Sandbox** into the "Application Name" field.
 
 ### Option 2: Using Powershell
-1.  Open Windows Powershell on your local machine:
+To publish Windows Sandbox to your host pool using PowerShell:
+
+1.  Open Windows PowerShell on your local machine.
 2.  Run the following command to sign in to your Azure account:
 ```cmd
 az login
