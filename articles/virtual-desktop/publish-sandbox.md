@@ -82,7 +82,7 @@ New-AzWvdApplication -ResourceGroupName [Resource Group Name] -GroupName [Applic
 ```
 
 >[!NOTE]
->This will prompt you for an app Name
+>After running this command, you'll be given a prompt to name the app. Fill out the prompt to continue.
 
 That's it! Leave the rest of the options defaults. You should now have Windows Sandbox published for your users. For reference your Remote Desktop app should now look like this:
 
