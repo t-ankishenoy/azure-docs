@@ -80,6 +80,7 @@ Set-AzContext -Tenant [Workspace Tenant Id] -Subscription [Workspace Subscriptio
 ```cmd
 New-AzWvdApplication -ResourceGroupName [Resource Group Name] -GroupName [Application Group Name] -FilePath 'C:\windows\system32\WindowsSandbox.exe' -IconIndex 0 -IconPath 'C:\windows\system32\WindowsSandbox.exe' -CommandLineSetting 'Allow' -ShowInPortal:$true -SubscriptionId [Workspace Subscription Id]
 ```
+
 >[!NOTE]
 >This will prompt you for an app Name
 
