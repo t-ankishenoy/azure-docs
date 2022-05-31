@@ -77,13 +77,14 @@ To publish Windows Sandbox to your host pool using PowerShell:
   az login
   
   Set-AzContext -Tenant <Workspace Tenant ID> -Subscription <Workspace Subscription ID>
-```
+  ```
+  
 3. Run the following command to create a Sandbox remote app:
 
   ```powershell
   
-  New-AzWvdApplication -ResourceGroupName [Resource Group Name] -GroupName [Application Group Name] -FilePath 'C:\windows\system32\WindowsSandbox.exe' -IconIndex 0 -  IconPath 'C:\windows\system32\WindowsSandbox.exe' -CommandLineSetting 'Allow' -ShowInPortal:$true -SubscriptionId [Workspace Subscription Id]
-```
+  New-AzWvdApplication -ResourceGroupName [Resource Group Name] -GroupName [Application Group Name] -FilePath 'C:\windows\system32\WindowsSandbox.exe' -IconIndex 0 -   IconPath 'C:\windows\system32\WindowsSandbox.exe' -CommandLineSetting 'Allow' -ShowInPortal:$true -SubscriptionId [Workspace Subscription Id]
+  ```
 
 >[!NOTE]
 >After running this command, you'll be given a prompt to name the app. Fill out the prompt to continue.
