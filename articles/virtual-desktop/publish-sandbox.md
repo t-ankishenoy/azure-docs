@@ -60,7 +60,7 @@ Next, prepare the VM VHD for Azure and upload the resulting VHD disk to Azure. T
 Once you've uploaded the VHD to Azure, create a host pool that's based on this new image by following the instructions in the [Create a host pool by using the Azure Marketplace](create-host-pools-azure-marketplace.md) tutorial.
 
 ## Publish Windows Sandbox on your host pool
-# [Azure portal](#tab/azure)
+### Option 1: Using [Azure portal](#tab/azure)
 To publish Windows Sandbox to your host pool:
 
 1. Sign in to the Azure portal.
@@ -68,7 +68,7 @@ To publish Windows Sandbox to your host pool:
 3. For "Application path," enter **C:\windows\system32\WindowsSandbox.exe**.
 4. Enter **Windows Sandbox** into the "Application Name" field.
 
-### Option 2: Using Powershell
+### Option 2: Using [PowerShell](#tab/powershell)
 To publish Windows Sandbox to your host pool using PowerShell:
 
 1.  Open Windows PowerShell on your local machine.
@@ -79,16 +79,17 @@ To publish Windows Sandbox to your host pool using PowerShell:
 Set-AzContext -Tenant [Workspace Tenant Id] -Subscription [Workspace Subscription Id]
 ```
 3.  Creat a Sandbox Remote App using the following powershell command:
-```cmd
-New-AzWvdApplication -ResourceGroupName [Resource Group Name] -GroupName [Application Group Name] -FilePath 'C:\windows\system32\WindowsSandbox.exe' -IconIndex 0 -IconPath 'C:\windows\system32\WindowsSandbox.exe' -CommandLineSetting 'Allow' -ShowInPortal:$true -SubscriptionId [Workspace Subscription Id]
+  ```powershell
+  
+  New-AzWvdApplication -ResourceGroupName [Resource Group Name] -GroupName [Application Group Name] -FilePath 'C:\windows\system32\WindowsSandbox.exe' -IconIndex 0 -  IconPath 'C:\windows\system32\WindowsSandbox.exe' -CommandLineSetting 'Allow' -ShowInPortal:$true -SubscriptionId [Workspace Subscription Id]
 ```
 
 >[!NOTE]
 >After running this command, you'll be given a prompt to name the app. Fill out the prompt to continue.
 
-That's it! Leave the rest of the options defaults. You should now have Windows Sandbox published for your users. For reference your Remote Desktop app should now look like this:
+---
 
-![image](https://user-images.githubusercontent.com/106349886/170580444-71f221d8-348c-4124-8e88-94c0275b0f4c.png)
+That's it! Leave the rest of the options defaults. You should now have Windows Sandbox Remote App published for your users.
 
 ## Next steps
 
